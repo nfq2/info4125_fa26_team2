@@ -1,0 +1,13 @@
+.DS_Store
+.venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+outputs/
+.streamlit/secrets.toml
+*.py[cod]
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/

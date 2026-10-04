@@ -1,0 +1,7 @@
+pandas>=2.2,<3
+numpy>=1.26,<3
+plotly>=6,<7
+streamlit>=1.45,<2
+jupyterlab>=4,<5
+nbclient>=0.10,<1
+pytest>=8,<9
