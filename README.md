@@ -1,5 +1,7 @@
 # AI & Student Learning Dashboard
 
+A Streamlit dashboard for exploring how students' AI usage relates to GPA changes, skill retention, and wellbeing. Filter the dataset, compare student groups, and view interactive charts to explore patterns in student learning.
+
 ## Setup
 
 From the project folder, use Python 3.12 and run:
