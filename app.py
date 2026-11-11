@@ -1,5 +1,10 @@
 """Streamlit entry point: load, validate, filter, and display student outcomes."""
 
+# Responsibility assignments follow the team Gantt chart:
+# https://docs.google.com/spreadsheets/d/1uSOO1QXKETdrjuNWMJ_h8pv9cArrmKAv-9kRPDGIosw/edit#gid=1115838130
+# Gantt 5.1: Audrey & Amber; Arielle & Nicole — dashboard integration.
+
+
 import pandas as pd
 import streamlit as st
 
@@ -94,6 +99,7 @@ if view == "Compare selections":
         )
     st.stop()
 
+# Gantt 5.2: Audrey & Amber — filters, reset, and key numbers.
 with st.sidebar:
     st.header("Explore a group")
     st.caption(
@@ -176,9 +182,11 @@ metrics[3].metric(
     help="Dataset label, not a clinical assessment or an individual risk prediction.",
 )
 
+# Gantt 4.1: Lily & Winnie — dashboard sections.
 overview, compare, wellbeing, methods = st.tabs(
     ["AI use & outcomes", "Compare groups", "Wellbeing", "Data & methods"]
 )
+# Gantt 5.3: Audrey & Amber; Samgar & Sun — academic outcome charts.
 with overview:
     outcome = st.selectbox(
         "Outcome",
@@ -256,6 +264,7 @@ with compare:
         "text/csv",
     )
 
+# Gantt 5.5: Audrey & Amber; Lily & Winnie — wellbeing and explanations.
 with wellbeing:
     st.subheader("Burnout categories within groups")
     burnout_group = st.selectbox(
@@ -280,6 +289,7 @@ with wellbeing:
         "Burnout and anxiety measurements are not documented sufficiently to interpret these labels as validated health measures. This dashboard does not diagnose or predict individual burnout."
     )
 
+# Gantt 2.4: Arielle & Nicole; Lily & Winnie — source and data limitations.
 with methods:
     st.subheader("What this dataset can tell us")
     st.write(

@@ -1,3 +1,5 @@
+# Gantt 6.1: Arielle & Nicole; Samgar & Sun — numerical verification.
+
 import pandas as pd
 import pytest
 from src.analysis import (

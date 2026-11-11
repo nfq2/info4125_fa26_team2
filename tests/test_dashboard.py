@@ -1,3 +1,6 @@
+# Gantt 6.1: Arielle & Nicole; Samgar & Sun — dashboard accuracy.
+# Gantt 6.2: Lily & Winnie; Audrey & Amber — usability checks.
+
 from pathlib import Path
 import pytest
 from streamlit.testing.v1 import AppTest

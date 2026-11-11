@@ -1,5 +1,9 @@
 """Figures shared by the notebook and dashboard."""
 
+# Gantt 3.1: Samgar & Sun — analysis charts.
+# Gantt 4.2: Lily & Winnie — chart choices and labels.
+
+
 import plotly.express as px
 import plotly.graph_objects as go
 from src.analysis import friendly, group_summary, burnout_summary, hours_summary, LABELS

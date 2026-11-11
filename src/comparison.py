@@ -1,5 +1,8 @@
 """Streamlit view for comparing two independently filtered selections."""
 
+# Gantt 5.4: Audrey & Amber; Lily & Winnie — side-by-side comparisons.
+
+
 import json
 
 import pandas as pd

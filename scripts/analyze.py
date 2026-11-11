@@ -1,5 +1,8 @@
 """Produce reproducible derived outputs, without changing the source CSV."""
 
+# Gantt 2.5: Arielle & Nicole — shared data and calculation exports.
+
+
 import argparse
 import hashlib
 import json

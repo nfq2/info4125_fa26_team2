@@ -1,5 +1,9 @@
 """Pure analysis functions. Loading never changes the original CSV."""
 
+# Gantt 2.1–2.3: Arielle & Nicole — data checks and preparation.
+# Gantt 3.1–3.4: Samgar & Sun — summary and comparison calculations.
+
+
 from pathlib import Path
 
 import numpy as np
@@ -305,6 +309,7 @@ def group_summary(df, group, outcome):
     return result
 
 
+# Gantt 3.5: Samgar & Sun; Lily & Winnie — wellbeing analysis.
 def burnout_summary(df, group):
     """Calculate burnout counts and percentages within each group."""
     counts = pd.crosstab(df[group], df.Burnout_Risk_Level).reindex(
