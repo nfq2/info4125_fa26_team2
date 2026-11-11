@@ -9,13 +9,25 @@ def test_additional_comparison_factors_render_and_use_filtered_records():
     app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=60).run()
     app.multiselect(key="major_filter").set_value(["Arts"]).run()
     app.selectbox(key="compare_outcome").select("Perceived_AI_Dependency").run()
-    for factor in ["Paid_Subscription", "Tool_Diversity", "Weekly_GenAI_Hours", "Traditional_Study_Hours",
-                   "Perceived_AI_Dependency", "Anxiety_Level_During_Exams", "Burnout_Risk_Level", "Pre_Semester_GPA"]:
+    for factor in [
+        "Paid_Subscription",
+        "Tool_Diversity",
+        "Weekly_GenAI_Hours",
+        "Traditional_Study_Hours",
+        "Perceived_AI_Dependency",
+        "Anxiety_Level_During_Exams",
+        "Burnout_Risk_Level",
+        "Pre_Semester_GPA",
+    ]:
         app.selectbox(key="compare_group").select(factor).run()
         assert not app.exception, factor
         assert app.selectbox(key="compare_outcome").value != factor
         # The downloadable table's counts must total the selected group, not the whole dataset.
-        tables = [element.value for element in app.dataframe if "Records" in element.value.columns and "Mean" in element.value.columns]
+        tables = [
+            element.value
+            for element in app.dataframe
+            if "Records" in element.value.columns and "Mean" in element.value.columns
+        ]
         assert len(tables) == 1
         assert tables[0]["Records"].sum() == 5933
 
@@ -62,7 +74,9 @@ def test_independent_selections_persist_and_handle_empty_groups():
     assert not app.exception
     assert app.metric[0].value == "0"
     assert app.metric[1].value == "15,059"
-    assert any("Group A has no matching records" in message.value for message in app.info)
+    assert any(
+        "Group A has no matching records" in message.value for message in app.info
+    )
     app.button(key="reset_comparison").click().run()
     assert not app.exception
     assert app.slider(key="selection_a_hours").value == (0.0, 5.0)
