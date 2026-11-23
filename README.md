@@ -2,6 +2,10 @@
 
 A Streamlit dashboard for exploring how students' AI usage relates to GPA changes, skill retention, and wellbeing. Filter the dataset, compare student groups, and view interactive charts to explore patterns in student learning.
 
+## Deployed Dashboard
+
+https://nfq2-info4125-fa26-team2-app-thrnlp.streamlit.app/
+
 ## Setup
 
 From the project folder, use Python 3.12 and run:
